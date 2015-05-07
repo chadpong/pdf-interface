@@ -1,0 +1,96 @@
+<html lang='en'>
+ <head>
+ 	<meta charset='utf-8'>
+ 	<script src='jquery-1.11.3.min.js'></script>
+ 	<script src='pdfmake.min.js'></script>
+ 	<script src='vfs_fonts.js'></script>
+ 	<script>
+
+    var font = {
+	   THSarabunNew : {
+	     normal: 'THSarabunNew.ttf',
+	   }
+	};
+
+ 	$(document).ready( function () {
+ 		var docDefinition = {
+ 		header: {
+ 			margin: [5, 5, 5, 5],
+ 			columns : [
+ 				{
+ 					text : 'logo'
+ 				},
+ 				{
+ 					text : 'header text'
+ 				}
+ 			]	        
+	    },
+ 		content: [
+		    {
+		      table: {
+		        // headers are automatically repeated if the table spans over multiple pages
+		        // you can declare how many rows should be treated as headers
+		        headerRows: 1,
+		        widths: [ '*', 'auto', 100, '*' ],
+
+		        body: [
+		          
+		          [ 'Value 1', 'Value 2', 'Value 3', 'Value 4' ],
+		          [ 'Value 1', 'Value 2', 'Value 3', 'Value 4' ],
+		          [ 'Value 1', 'Value 2', 'Value 3', 'Value 4' ],
+		          [ 'Value 1', 'Value 2', 'Value 3', 'Value 4' ],
+		          [ 'Value 1', 'Value 2', 'Value 3', 'Value 4' ],
+		          [ 'Value 1', 'Value 2', 'Value 3', 'Value 4' ],
+		          [ 'Value 1', 'Value 2', 'Value 3', 'Value 4' ],
+		          [ 'Value 1', 'Value 2', 'Value 3', 'Value 4' ],
+		          [ 'Value 1', 'Value 2', 'Value 3', 'Value 4' ],
+		          [ 'Value 1', 'Value 2', 'Value 3', 'Value 4' ],
+		          [ 'Value 1', 'Value 2', 'Value 3', 'Value 4' ],
+		          [ 'Value 1', 'Value 2', 'Value 3', 'Value 4' ],
+		          [ 'Value 1', 'Value 2', 'Value 3', 'Value 4' ],
+		          [ 'Value 1', 'Value 2', 'Value 3', 'Value 4' ],
+		          [ 'Value 1', 'Value 2', 'Value 3', 'Value 4' ],
+		          [ 'Value 1', 'Value 2', 'Value 3', 'Value 4' ],
+		          [ 'Value 1', 'Value 2', 'Value 3', 'Value 4' ],
+		          [ 'Value 1', 'Value 2', 'Value 3', 'Value 4' ],
+		          [ 'Value 1', 'Value 2', 'Value 3', 'Value 4' ],
+		          [ 'Value 1', 'Value 2', 'Value 3', 'Value 4' ],
+		          [ 'Value 1', 'Value 2', 'Value 3', 'Value 4' ],
+		          [ 'Value 1', 'Value 2', 'Value 3', 'Value 4' ],
+		          [ 'Value 1', 'Value 2', 'Value 3', 'Value 4' ],
+		          [ 'Value 1', 'Value 2', 'Value 3', 'Value 4' ],
+		          [ 'Value 1', 'Value 2', 'Value 3', 'Value 4' ],
+		          [ 'Value 1', 'Value 2', 'Value 3', 'Value 4' ],
+		          [ 'Value 1', 'Value 2', 'Value 3', 'Value 4' ],
+		          [ 'Value 1', 'Value 2', 'Value 3', 'Value 4' ],
+		          [ 'Value 1', 'Value 2', 'Value 3', 'Value 4' ],
+		          [ 'Value 1', 'Value 2', 'Value 3', 'Value 4' ],
+		          [ 'Value 1', 'Value 2', 'Value 3', 'Value 4' ],
+		          [ 'Value 1', 'Value 2', 'Value 3', 'Value 4' ],
+		          [ 'Value 1', 'Value 2', 'Value 3', 'Value 4' ],
+		          [ 'Value 1', 'Value 2', 'Value 3', 'Value 4' ],
+		          [ 'Value 1', 'Value 2', 'Value 3', 'Value 4' ],
+		          [ 'Value 1', 'Value 2', 'Value 3', 'Value 4' ],
+		          [ 'Value 1', 'Value 2', 'Value 3', 'Value 4' ],
+		          [ 'Value 1', 'Value 2', 'Value 3', 'Value 4' ],
+		          [ 'Value 1', 'Value 2', 'Value 3', 'Value 4' ],
+		          [ 'Value 1', 'Value 2', 'Value 3', 'Value 4' ]
+		        ]
+		      }
+		    }
+		  ],
+ 			defaultStyle: {
+    			font: 'THSarabunNew'
+  			}
+ 		};
+ 		pdfMake.fonts = font;
+
+ 		pdfMake.createPdf(docDefinition).open();
+ 		pdfMake.createPdf(docDefinition).print();
+ 		pdfMake.createPdf(docDefinition).download('optionalName.pdf');	
+ 	});
+ 	</script>
+ </head>
+ <body>
+ </body>
+ </html>
