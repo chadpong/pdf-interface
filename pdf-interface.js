@@ -7,6 +7,7 @@
 	};
 
 	var docDefinition = {
+			pageSize: 'A4',
 			pageMargins: [20, 100, 20, 70], // left, top, right, bottom
 	 		header: {
 	 			margin: 5,
