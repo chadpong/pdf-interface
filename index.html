@@ -2,14 +2,21 @@
  <head>
  	<meta charset='utf-8'> 	
  	<script src='jquery-1.11.3.min.js'></script>
-	<script src="https://maps.googleapis.com/maps/api/js"></script>
+	<!-- <script src="https://maps.googleapis.com/maps/api/js"></script> -->
 	<script src="html2canvas.js"></script>
  	<script src='base64.js'></script>
  	<script src='pdfmake.min.js'></script>
  	<script src='vfs_fonts.js'></script>
  	<script src='pdf-interface.js'></script>
+    <style>
+        html, body {
+    		height: 100%;
+    		margin: 0;
+    	}
+    </style>
  	<script>	
 	var base64_map;
+        
 	function initialize() {
 		var mapCanvas = document.getElementById('map-canvas');
 		var mapOptions = {
@@ -36,17 +43,16 @@
 			 return false;                    
 			}
 		});
-	}
+    }
 	
- 	$(document).ready( function () {
- 		
-		
-		initialize();
+ 	$(document).ready( function () {	
+		// initialize();
+        createPDF();
  	});
  	</script>
  </head>
  <body>
-	<div id="map-canvas" style="width:350px; height: 350px; background-color: #CCC;"></div>	
- 	<iframe frameBorder="0" width="50%" height="95%" style="margin:0px;"></iframe>
+	<!-- <div id="map-canvas" style="width:350px; height: 350px; background-color: #CCC;"></div>	-->
+ 	<iframe frameBorder="0" width="100%" height="100%" style="margin:0px;"></iframe>
  </body>
  </html>

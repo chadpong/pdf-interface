@@ -1,4 +1,4 @@
-﻿// PAGE SETTINGS
+// PAGE SETTINGS
 var DEFAULT_FONT_SIZE = 14;
 var INDENT_LEFT = 20;
 var INDENT_RIGHT = 20;
@@ -225,18 +225,7 @@ var SCREENING_ASSESSMENT_SUMMARY = [];
 						body: SCREENING_ASSESSMENT_SUMMARY
 					}									
 				},
-				{
-					text: '4. แผนที่บ้านผู้สูงอายุ',
-					style : 'header',
-					alignment : 'left',
-					margin : [0, LINE_SPACING, 0, 0]
-				},
-				{
-					margin : [0, LINE_SPACING, 0, 0],
-					image: 'map',
-					alignment : 'center',
-					width: 300
-				},
+				
 				{
 					stack :STACK
 				}
@@ -258,8 +247,8 @@ var SCREENING_ASSESSMENT_SUMMARY = [];
 			images : {
 				nu_logo : base64_nu_logo,
 				nhso_logo : base64_nhso_logo,
-				avatar : base64_avatar,
-				map : base64_map
+				avatar : base64_avatar
+				// map : base64_map
 			}
  		};
 
